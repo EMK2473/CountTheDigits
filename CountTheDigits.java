@@ -6,10 +6,12 @@ public class CountTheDigits {
       if (intInput == 0){
          return 1;
       }
-      if(intInput / 10 == 0) {
+      if (intInput / 10 == 0) {
          return 1;
       }
-      return 1;
+      else {
+         return 1 + digitCount(intInput / 10);
+      }
    }
    
    public static void main(String[] args) {
@@ -19,5 +21,6 @@ public class CountTheDigits {
       num = scnr.nextInt();
       digits = digitCount(num);
       System.out.println(digits);
+      scnr.close();
    }
 }
